@@ -1,5 +1,4 @@
 var currentTime = moment().hours();
-console.log(currentTime);
 
 //write a function that targets .time-block
 $('.time-block').each(function() {
@@ -9,7 +8,7 @@ $('.time-block').each(function() {
         $('.description').removeClass('present');
         $('.description').addClass('past');
     }
-    else if (currentTime = blockHour) {
+    else if (currentTime === blockHour) {
         $('.description').removeClass('future');
         $('.description').removeClass('past');
         $('.description').addClass('present');
@@ -19,9 +18,6 @@ $('.time-block').each(function() {
         $('.description').removeClass('present');
         $('.description').addClass('future');
     }
-    // and is going to compare currentTime and id of the time block 
-    //if currentime > id of the time block => .addClass('pasr) else if current = id of the block .removeClass('past) .addClass('present')
-    // else rm past rm present addd future
 })
 
 //when save button is clicked text area will be saved to local storage
